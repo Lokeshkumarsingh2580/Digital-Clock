@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body
+    style="
+      background: lightgreen;
+      text-align: center;
+      height: 90vh;
+      justify-items: center;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+    "
+  >
+    <div>
+      <h1
+        class="clock"
+        style="display: flex; justify-content: center; justify-items: center"
+      >
+        Content
+      </h1>
+    </div>
+    <script>
+      function displayClock() {
+        const clock = document.querySelector(".clock");
+        clock.textContent = new Date().toLocaleTimeString();
+        setTimeout(displayClock, 1000);
+      }
+      window.onload = displayClock();
+
+      // setInterval(() => {
+      //   const clock = document.querySelector(".clock");
+      //   let date = new Date().toLocaleTimeString();
+      //   clock.textContent = date;
+      // }, 1000);
+    </script>
+  </body>
+</html>
